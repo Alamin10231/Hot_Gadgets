@@ -1,25 +1,24 @@
-
-
-#spiner{
-   
+#spiner {
     width: 48px;
     height: 48px;
     border: 5px solid black;
     border-bottom-color: transparent;
     border-radius: 50%;
-    display: inline-block;
+    display: none; /* Hide the spinner by default */
     box-sizing: border-box;
-    animation: rotation 1s linear ;
+    animation: rotation 1s linear infinite; /* Add 'infinite' to keep spinning */
     position: relative;
     left: 50%;
-    
-    }
+    transform: translateX(-50%); /* Center the spinner */
+}
 
-    @keyframes rotation {
+@keyframes rotation {
     0% {
         transform: rotate(0deg);
     }
     100% {
         transform: rotate(360deg);
     }
-    } 
+}
+
+
